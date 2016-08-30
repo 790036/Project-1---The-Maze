@@ -9,10 +9,7 @@ public class MazeWalker
 {
     // instance variables - replace the example below with your own
     private int x;
-
-    /**
-     * Constructor for objects of class MazeWalker
-     */
+     // Constructor for objects of class MazeWalker
     public MazeWalker()
     {
         // initialise instance variables
@@ -31,32 +28,20 @@ public class MazeWalker
         return x + y;
     }
     public void walkMaze(MazeBot mazeBot){
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.turnLeft();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.turnRight();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.turnRight();
-        for(int t=1; t<5; t++){
-        mazeBot.moveForward();
+        while(mazeBot.didNotReachGoal()){
+            while(mazeBot.canMoveForward()){
+                mazeBot.moveForward();}
+            if(mazeBot.canMoveInDirection(90)){
+                mazeBot.turnRight();}
+            else if(mazeBot.canMoveInDirection(270)){
+                mazeBot.turnLeft();}
+
+                
+        if(mazeBot.didReachGoal() == true){
+            mazeBot.signalSuccess();
+        }
+        else{
+            mazeBot.signalError();
+        }
     }
-        //mazeBot.moveForward();
-        //mazeBot.moveForward();
-        //mazeBot.moveForward();
-        mazeBot.turnLeft();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.turnLeft();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        mazeBot.turnRight();
-        mazeBot.moveForward();
-        mazeBot.moveForward();
-        if(public boolean
-    }
-}
+}}

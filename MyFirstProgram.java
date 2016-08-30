@@ -2,8 +2,8 @@
 /**
  * Write a description of class MyFirstProgram here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Levi Rutherford
+ * @FirstClass
  */
 public class MyFirstProgram
 {
