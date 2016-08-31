@@ -15,7 +15,12 @@ public class MazeWalker
         // initialise instance variables
         x = 0;
     }
-
+    public static void run()
+    {
+        Maze maze = new Maze();
+        MazeWalker mazeWalker = new MazeWalker();
+        mazeWalker.walkMaze(maze.getMazeBot());
+    }
     /**
      * An example of a method - replace this comment with your own
      * 
@@ -35,13 +40,7 @@ public class MazeWalker
                 mazeBot.turnRight();}
             else if(mazeBot.canMoveInDirection(270)){
                 mazeBot.turnLeft();}
-
-                
         if(mazeBot.didReachGoal() == true){
-            mazeBot.signalSuccess();
-        }
+            mazeBot.signalSuccess();}
         else{
-            mazeBot.signalError();
-        }
-    }
-}}
+            mazeBot.signalError();}}}}
